@@ -1,7 +1,7 @@
-resource "aws_s3_bucket" "demo-example" {
-  bucket = "demoexample3333"
+resource "aws_s3_bucket" "backup_s3" {
+  bucket = "prod_backups"
   versioning {
-    enabled = false
+    enabled    = false
     mfa_delete = false
   }
 }
