@@ -5,7 +5,7 @@
     {
       "tool": {
         "driver": {
-          "name": "ESLint",
+          "name": "accurics",
           "rules": [
             {
               "id": "no-unused-vars",
