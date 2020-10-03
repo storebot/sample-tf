@@ -2,6 +2,9 @@ provider "aws" {
   region = "us-east-1"
 }
 
+
+#This is a comment
+
 resource "aws_s3_bucket" "demo-s3" {
   bucket = "${var.s3_bucket_prefix}-terraformcloud"
   versioning {
@@ -11,5 +14,5 @@ resource "aws_s3_bucket" "demo-s3" {
 }
 
 variable "s3_bucket_prefix" {
-  default = "sample_prefix_test922"
+  default = "sample_prefix_test923"
 }
