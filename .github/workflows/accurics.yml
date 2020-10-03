@@ -1,6 +1,16 @@
-name: "accurics"
+name: "Code scanning"
 
 on:
   push:
   schedule:
-  - cron: '0 0 * * 0'
+  - cron: '10 0 * * 0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Import Results
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: sarif.json
