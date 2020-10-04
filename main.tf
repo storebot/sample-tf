@@ -4,6 +4,8 @@ provider "aws" {
 
 
 #This is a comment
+#do not use this in production
+# this is a demo s3 bucket and does not have any security enabled
 
 resource "aws_s3_bucket" "demo-s3" {
   bucket = "${var.s3_bucket_prefix}-terraformcloud"
