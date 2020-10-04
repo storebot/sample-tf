@@ -16,5 +16,5 @@ resource "aws_s3_bucket" "demo-s3" {
 }
 
 variable "s3_bucket_prefix" {
-  default = "sample_prefix_test923"
+  default = "sample_prefix_test928"
 }
