@@ -8,7 +8,7 @@
                                         "name": "accurics",
                                         "rules": [
                                                 {
-                                                        "id": "[HIGH]: S3 bucket accessible to all authenticated users.",
+                                                        "id": "s3-accessible-all-users",
                                                         "shortDescription": {
                                                                 "text": "**Vulnerability**\nS3 bucket Access is allowed to all AWS Account Users.\n \n**Remediation**\nS3 bucket Access should be limited to specific users and roles."
                                                         },
@@ -20,7 +20,7 @@
                                                         }
                                                 },
                                                 {
-                                                        "id": "[HIGH]: S3 bucket should have versioning MFA delete enabled",
+                                                        "id": "s3-mfa-delete",
                                                         "shortDescription": {
                                                                 "text": "**Vulnerability**\nEnabling MFA delete for versioning is a good way to add extra protection to sensitive files stored in buckets.aws s3api put-bucket-versioning --bucket bucketname --versioning-configuration Status=Enabled,MFADelete=Enabled --mfa your-mfa-serial-number mfa-code\n \n**Remediation**\nUsing the AWS s3api CLI, enable MFA Delete for the S3 buckets that fail this rule, for example: aws s3api put-bucket-versioning --bucket bucketname --versioning-configuration Status=Enabled,MFADelete=Enabled --mfa your-mfa-serial-number mfa-code. Refer to: https://aws.amazon.com/blogs/security/securing-access-to-aws-using-mfa-part-3"
                                                         },
@@ -32,7 +32,7 @@
                                                         }
                                                 },
                                                 {
-                                                        "id": "[HIGH]: S3 bucket should have versioning enabled",
+                                                        "id": "s3-versioning",
                                                         "shortDescription": {
                                                                 "text": "**Vulnerability**\nEnabling S3 versioning will enable easy recovery from both unintended user actions, like deletes and overwrites\n \n**Remediation**\nS3 bucket should have versioning enabled"
                                                         },
@@ -48,7 +48,7 @@
                         },
                         "results": [
                                 {
-                                        "ruleId": "[HIGH]: S3 bucket accessible to all authenticated users.",
+                                        "ruleId": "s3-accessible-all-users",
                                         "message": {
                                                 "text": "**Vulnerability**\nS3 bucket Access is allowed to all AWS Account Users.\n \n**Remediation**\nS3 bucket Access should be limited to specific users and roles."
                                         },
@@ -91,7 +91,7 @@
                                         "level": "warning"
                                 },
                                 {
-                                        "ruleId": "[HIGH]: S3 bucket should have versioning MFA delete enabled",
+                                        "ruleId": "s3-mfa-delete",
                                         "ruleIndex": 1,
                                         "message": {
                                                 "text": "**Vulnerability**\nEnabling MFA delete for versioning is a good way to add extra protection to sensitive files stored in buckets.aws s3api put-bucket-versioning --bucket bucketname --versioning-configuration Status=Enabled,MFADelete=Enabled --mfa your-mfa-serial-number mfa-code\n \n**Remediation**\nUsing the AWS s3api CLI, enable MFA Delete for the S3 buckets that fail this rule, for example: aws s3api put-bucket-versioning --bucket bucketname --versioning-configuration Status=Enabled,MFADelete=Enabled --mfa your-mfa-serial-number mfa-code. Refer to: https://aws.amazon.com/blogs/security/securing-access-to-aws-using-mfa-part-3"
@@ -135,7 +135,7 @@
                                         "level": "warning"
                                 },
                                 {
-                                        "ruleId": "[HIGH]: S3 bucket should have versioning enabled",
+                                        "ruleId": "s3-versioning",
                                         "ruleIndex": 2,
                                         "message": {
                                                 "text": "**Vulnerability**\nEnabling S3 versioning will enable easy recovery from both unintended user actions, like deletes and overwrites\n \n**Remediation**\nS3 bucket should have versioning enabled"
