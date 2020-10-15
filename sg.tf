@@ -1,5 +1,5 @@
 resource "aws_security_group" "acme_web_wide_open" {
-  name        = "acme_web_wide_open_2"
+  name        = "acme_web_wide_open_3"
   description = "Used in the terraform"
   vpc_id      = "some_dummy_vpc"
 
