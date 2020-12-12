@@ -1,7 +1,5 @@
 # sample-tf
 Example Terraform
 
-
-test
-'
+Example
 
