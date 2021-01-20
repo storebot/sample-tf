@@ -12,9 +12,7 @@ resource "aws_security_group" "acme_web_wide_open" {
     to_port     = 22
     from_port   = 22
     protocol    = "tcp"
-    
     cidr_blocks = ["0.0.0.0/0"]
-    
   }
 
   # outbound internet access
