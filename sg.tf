@@ -9,12 +9,12 @@ resource "aws_security_group" "acme_web_wide_open" {
 
   # SSH access from anywhere
   ingress {
-    to_port     = 22
-    from_port   = 22
-    protocol    = "tcp"
-    
-    cidr_blocks = ["0.0.0.0/0"]
-    
+    to_port   = 22
+    from_port = 22
+    protocol  = "tcp"
+
+    cidr_blocks = ["<cidr>"]
+
   }
 
   # outbound internet access
