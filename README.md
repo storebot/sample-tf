@@ -1,8 +1,1 @@
-# sample-tf
-Example Terraform
-
-Example
-
-asdfdsaf
-
-sdf
+AASDSADFS
