@@ -7,7 +7,9 @@ resource "aws_s3_bucket" "demo-s3" {
   
   versioning {
     enabled    = false
+    
     mfa_delete = false
+    
   }
 }
 
